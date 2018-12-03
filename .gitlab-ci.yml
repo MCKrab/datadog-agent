@@ -1,5 +1,17 @@
 stages:
+  - source_test
+  - binary_build
+  - integration_test
   - package_build
+  - check_deploy
+  - testkitchen_deploy
+  - testkitchen_testing
+  - testkitchen_cleanup
+  - image_build
+  - image_deploy
+  - deploy
+  - deploy_invalidate
+  - e2e
 
 variables:
   SRC_PATH: /src/github.com/DataDog/datadog-agent
